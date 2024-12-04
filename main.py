@@ -1,5 +1,10 @@
 import os
 import sys
+import rich
+def clear_terminal():
+    os.system('cls')
 
-todo = open(r"C:\Users\charl\OneDrive\Desktop\coding\todo\list.txt")
-contents = os.listdir(todo)
+with open('list.txt', 'r') as todo:
+    clear_terminal()
+    for items in todo:
+        print(items)
